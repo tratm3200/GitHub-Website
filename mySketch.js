@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+function setup() {
+	createCanvas(windowWidth, windowHeight);
+	print(windowWidth);
+	print(windowHeight);
+	print(windowWidth/2);
+	print(windowHeight/2);
+}
 
-<head>
-	<meta charset="utf-8" />
-	<!-- keep the line below for OpenProcessing compatibility -->
-	<script src="https://openprocessing.org/openprocessing_sketch.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/addons/p5.sound.min.js"></script>
-	<script src="mySketch.js"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-
-<body>   
-	
-</body>
-
-</html>
+function draw() {
+	background(255);
+	rectMode(CENTER);
+	rect(mouseX, mouseY, windowWidth/2, windowHeight/2);
+	fill(163);
+	line(0, 0, mouseX-windowWidth/4, mouseY-windowHeight/4);
+	line(windowWidth, windowHeight, mouseX+windowWidth/4, mouseY+windowHeight/4);	
+	line(0, windowHeight, mouseX-windowWidth/4, mouseY+windowHeight/4);
+	line(windowWidth, 0, mouseX+windowWidth/4, mouseY-windowHeight/4);
+}
